@@ -36,13 +36,22 @@
 
         /**
         * @function playSong
-        * @desc Plays currentBuzzObject and sets song.playing boolean truthy
+        * @desc Plays currentBuzzObject and sets song.playing boolean true
         * @param {Object} song
-        * @param {Object} currentBuzzObject
         */
-        var playSong = function(currentBuzzObject, song) {
+        var playSong = function(song) {
             currentBuzzObject.play();
             song.playing = true;
+        };
+
+        /**
+        * @function stopSong
+        * @desc Stops currentBuzzObject and sets song.playing boolean false
+        * @param {Object} song
+        */
+        var stopSong = function(song) {
+            currentBuzzObject.stop();
+            song.playing = null;
         };
 
         /**
@@ -72,7 +81,7 @@
             if (SongPlayer.currentSong !== song) {
                 setSong(song);
 
-                playSong(currentBuzzObject, song);
+                playSong(song);
             } else if (SongPlayer.currentSong === song) {
                 if (currentBuzzObject.isPaused()) {
                     currentBuzzObject.play();
@@ -100,8 +109,24 @@
             currentSongIndex--;
 
             if (currentSongIndex < 0) {
-                currentBuzzObject.stop();
-                SongPlayer.currentSong.playing = null;
+                stopSong(song);
+            } else {
+                var song = currentAlbum.songs[currentSongIndex];
+                setSong(song);
+                playSong(song);
+            }
+        };
+
+        /**
+        * @function SongPlayer.next
+        * @desc Changes currentSongIndex plus one, allowing next track button functionality.
+        */
+        SongPlayer.next = function() {
+            var currentSongIndex = getSongIndex(SongPlayer.currentSong);
+            currentSongIndex++;
+
+            if (currentSongIndex === currentAlbum.songs.length) {
+                stopSong(song);
             } else {
                 var song = currentAlbum.songs[currentSongIndex];
                 setSong(song);
