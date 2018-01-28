@@ -94,3 +94,17 @@
         margin: auto;
     }
 }
+
+.player-bar {
+  document.addEventListener('scroll', function (event) {
+    if (document.body.scrollHeight ==
+        document.body.scrollTop +
+        window.innerHeight) {
+        alert("Bottom!");
+    }
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+});
+}
