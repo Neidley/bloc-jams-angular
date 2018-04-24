@@ -70,7 +70,7 @@
    JQuery /
    Angular
 
-##Initial Angular template clone instructions:
+## Initial Angular template clone instructions:
 
 
 ## Bloc Frontend Project Starter
