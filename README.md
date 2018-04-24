@@ -1,3 +1,78 @@
+# Bloc Jams:
+# Refractor JavaScript and JQuery to Angular
+
+### General Overview
+
+  This repository contains a spotify replica app built using the Angular framework.
+
+
+### Skills learned while building this app:
+
+
+**Angular Introduction**
+
+    Introduction: the basic what and why of the Angular framework
+
+
+**Configuration**
+
+    Configuration: getting started with Bloc Jams Angular
+
+
+**Routing and States**
+
+    Routing and States: establish URL paths for Bloc Jams views
+
+
+**Templates**
+
+    Templates: render dynamic views in the browser
+
+
+**Controllers**
+
+    Controllers: control the flow of data in your application
+
+
+**Services: Part 1**
+
+    Services: organize and share code across your application
+
+
+**Services: Part 2**
+
+    Services (cont.): organize and share code across your application
+
+
+**Services: Part 3**
+
+    Services (cont.): organize and share code across your application
+
+
+**Directives: Part 1**
+
+    Directives: attach specific Angular behavior to DOM elements
+
+
+**Directives: Part 2**
+
+    Directives (cont.): attach specific Angular behavior to DOM elements
+
+
+**Filters**
+
+    Filters: format the value of an expression displayed to the user
+
+
+### Tech Used
+
+   JavaScript /
+   JQuery /
+   Angular
+
+##Initial Angular template clone instructions:
+
+
 ## Bloc Frontend Project Starter
 
 A starter application for student projects in Bloc's [Frontend Web Development Course](https://www.bloc.io/frontend-development-bootcamp).
